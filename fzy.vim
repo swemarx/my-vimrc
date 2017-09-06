@@ -10,6 +10,7 @@ function! FzyCommand(choice_command, vim_command)
 	endif
 endfunction
 
-nnoremap <leader>e :call FzyCommand("find -type f", ":e")<cr>
-nnoremap <leader>v :call FzyCommand("find -type f", ":vs")<cr>
-nnoremap <leader>s :call FzyCommand("find -type f", ":sp")<cr>
+" Check .vimrc for mappings
+"nnoremap <leader>e :call FzyCommand("find -type f", ":e")<cr>
+"nnoremap <leader>v :call FzyCommand("find -type f", ":vs")<cr>
+"nnoremap <leader>s :call FzyCommand("find -type f", ":sp")<cr>
