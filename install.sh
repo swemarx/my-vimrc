@@ -3,11 +3,10 @@
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
-# Backup old config
-if [ -d "~/.vim" -o -f "~/.vimrc" ]; then
+if [ -d ~/.vim -o -f ~/.vimrc ]; then
 	vimbackup="~/vim-config-$(date '+%Y%m%d%H%M%S').tgz"
-	tar cvfz $vimbackup ~/.vimrc ~/.vim >/dev/null 2>&1
 	echo "Backing up old config to $vimbackup"
+	tar cvfz $vimbackup ~/.vimrc ~/.vim >/dev/null
 fi
 
 echo "Clearing out ~/.vim.."
