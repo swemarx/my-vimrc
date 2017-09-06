@@ -19,7 +19,10 @@ echo "Installing new .vimrc.."
 cp .vimrc ~/
 
 echo "Installing VimPlug.."
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >/dev/null 2>&1
+curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >/dev/null 2>&1
+
+echo "Installing vim-sensible.."
+curl -fLo ~/.vim/plugin/sensible.vim https://raw.githubusercontent.com/tpope/vim-sensible/master/plugin/sensible.vim >/dev/null 2>&1
 
 echo "Installing vim-files.."
 cp *.vim ~/.vim/plugin/
