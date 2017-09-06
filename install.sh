@@ -6,17 +6,23 @@ export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 if [ -d "~/.vim" -o -f "~/.vimrc" ]; then
 	vimbackup="~/vim-config-$(date '+%Y%m%d%H%M%S').tgz"
 	tar cvfz $vimbackup ~/.vimrc ~/.vim >/dev/null 2>&1
-	echo "Old config backed-up as $vimbackup"
+	echo "Backing up old config to $vimbackup"
 fi
 
-# Copy .vimrc in-place
+echo "Clearing out ~/.vim.."
+[ -d ~/.vim ] && rm -rf ~/.vim
+
+echo "Setting up directory structure.."
+mkdir -p ~/.vim/{autoload,plugin}
+
+echo "Installing new .vimrc.."
 cp .vimrc ~/
 
-# Install VimPlug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+echo "Installing VimPlug.."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim >/dev/null 2>&1
 
-# Copy vim's
-cp *.vim ~/.vim/autoload/
+echo "Installing vim-files.."
+cp *.vim ~/.vim/plugin/
 
-# Launch vim and install plugins
+echo "Installing plugins.."
 vim +PlugInstall +q +q
