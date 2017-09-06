@@ -4,7 +4,7 @@
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
 if [ -d ~/.vim -o -f ~/.vimrc ]; then
-	vimbackup="~/vim-config-$(date '+%Y%m%d%H%M%S').tgz"
+	vimbackup="$HOME/vim-config-$(date '+%Y%m%d%H%M%S').tgz"
 	echo "Backing up old config to $vimbackup"
 	tar cvfz $vimbackup ~/.vimrc ~/.vim >/dev/null
 fi
