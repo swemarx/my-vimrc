@@ -15,5 +15,8 @@ cp .vimrc ~/
 # Install VimPlug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Copy vim's
+cp *.vim ~/.vim/autoload/
+
 # Launch vim and install plugins
 vim +PlugInstall +q +q
