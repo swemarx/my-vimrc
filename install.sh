@@ -1,4 +1,5 @@
 #!/bin/bash
+# 2017-09-06, swemarx.
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
