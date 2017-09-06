@@ -32,5 +32,5 @@ vim +PlugInstall +q +q
 
 echo -e "Done!\n"
 
-echo "You also need fzy and make sure it resides in your $PATH"
+echo "You also need fzy and make sure it resides in your \$PATH"
 echo "Check https://github.com/jhawthorn/fzy for details."
