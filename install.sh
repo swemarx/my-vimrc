@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
@@ -26,3 +26,8 @@ cp *.vim ~/.vim/plugin/
 
 echo "Installing plugins.."
 vim +PlugInstall +q +q
+
+echo -e "Done!\n"
+
+echo "You also need fzy and make sure it resides in your $PATH"
+echo "Check https://github.com/jhawthorn/fzy for details."
